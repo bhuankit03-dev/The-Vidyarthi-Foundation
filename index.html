@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vidyarthi Foundation | Knowledge for Humanity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc; /* Very light, warm background */
+        }
+        .text-kindness {
+            color: #4B5563; /* Subtle gray for warmth */
+        }
+        .bg-primary {
+            background-color: #0E7490; /* Deep Teal/Cyan for Trust */
+        }
+        .text-primary {
+            color: #0E7490;
+        }
+        .btn-cta {
+            background-color: #FBBF24; /* Soft Gold/Amber for Optimism */
+            color: #1F2937;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        /* Style for the founder quote */
+        .quote-box {
+            border-left: 4px solid #FBBF24;
+            padding-left: 1.5rem;
+            font-style: italic;
+        }
+        .loading-indicator {
+            display: none;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #0E7490;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* Removed unused .img-placeholder-kindness styles */
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar (Trust & Clarity) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <!-- Simple stylized V/Open Book icon -->
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.5l-9.5-6L12 3l9.5 12.5L12 21.5zm0-18.5V21.5M3 15.5h18"></path>
+                </svg>
+                <span class="text-2xl font-extrabold text-gray-800">The Vidyarthi Foundation</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#vision" class="text-kindness hover:text-primary transition duration-150">Our Vision</a>
+                <a href="#programs" class="text-kindness hover:text-primary transition duration-150">Programs</a>
+                <a href="#labs" class="text-kindness hover:text-primary transition duration-150 font-bold">Vidyarthi Labs ✨</a>
+                <a href="#founder" class="text-kindness hover:text-primary transition duration-150">The Founder</a>
+                <a href="#support" class="text-primary font-semibold hover:text-yellow-600 transition duration-150 border-b-2 border-transparent hover:border-primary">Support Us</a>
+            </nav>
+            <button class="md:hidden text-kindness focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section (Hope & Empowerment) -->
+    <section class="bg-primary text-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Top banner emphasizing FREE -->
+            <p class="text-lg sm:text-xl font-semibold mb-3 bg-yellow-300 text-gray-900 px-4 py-2 inline-block rounded-full shadow-lg">
+                Education for All, Forever Free.
+            </p>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mt-4">
+                Unlock Your Potential. Absolutely Free.
+            </h1>
+            <p class="mt-4 max-w-3xl mx-auto text-xl sm:text-2xl font-light opacity-90">
+                **The Vidyarthi Foundation:** Guided by empathy, built on trust. We believe that access to transformative, holistic education is a fundamental **right**, not a privilege.
+            </p>
+            <div class="mt-10">
+                <a href="#programs" class="btn-cta text-xl px-10 py-4 rounded-xl font-bold inline-flex items-center">
+                    Explore Our Free Programs
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Vision (Trust & Mission) -->
+    <section id="vision" class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="order-2 lg:order-1 mt-10 lg:mt-0">
+                    <h2 class="text-4xl font-extrabold text-primary sm:text-5xl">
+                        Our Heartfelt Promise: Knowledge Without Barriers.
+                    </h2>
+                    <p class="mt-4 text-xl text-kindness leading-relaxed">
+                        At The Vidyarthi Foundation, we are driven by a singular, profound belief: that the power of education should be accessible to every single human being, regardless of their background or circumstance. We champion a world where curiosity is nurtured, potential is unleashed, and financial limitations never stand in the way of a bright future.
+                    </p>
+                    <p class="mt-4 text-xl text-kindness leading-relaxed font-semibold">
+                        This commitment to free access is the cornerstone of our ethos. We are a foundation built on empathy, dedicated to equipping our **Vidyarthis** (seekers of knowledge) with both the wisdom of the world and the understanding of its mechanics.
+                    </p>
+                </div>
+                <!-- START: Image Placeholder Replaced with Conceptual SVG -->
+                <div class="order-1 lg:order-2">
+                    <div class="h-80 w-full rounded-2xl p-6 bg-teal-200 flex items-center justify-center shadow-lg">
+                        <svg class="w-full h-full max-w-sm" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Large guiding figure (Mentor) -->
+                            <circle cx="100" cy="50" r="30" fill="#0E7490"/>
+                            <path d="M75 50 C 90 120, 110 120, 125 50 L 100 50 Z" fill="#0E7490" stroke="#064E3B" stroke-width="2" stroke-linejoin="round"/>
+                            
+                            <!-- Smaller figure (Learner) -->
+                            <circle cx="155" cy="85" r="20" fill="#FBBF24"/>
+                            <path d="M140 85 C 150 140, 160 140, 170 85 Z" fill="#FBBF24" stroke="#D97706" stroke-width="2" stroke-linejoin="round"/>
+                            
+                            <!-- Knowledge connection / Light -->
+                            <path d="M100 50 L 155 85" stroke="#064E3B" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 5"/>
+                            
+                            <!-- Text Overlay -->
+                            <text x="50%" y="145" font-family="Inter, sans-serif" font-size="10" fill="#064E3B" text-anchor="middle" font-weight="bold">KINDNESS IN GUIDANCE & INCLUSION</text>
+                        </svg>
+                    </div>
+                </div>
+                <!-- END: Image Placeholder Replaced -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section (Clarity & Opportunity) -->
+    <section id="programs" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl font-extrabold text-gray-800 sm:text-5xl">
+                    Transforming Lives, One Skill at a Time.
+                </h2>
+                <p class="mt-3 text-xl text-kindness max-w-4xl mx-auto">
+                    Our curriculum synthesizes essential life skills with deep conceptual science, preparing you for success in every dimension of life.
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                <!-- Program Card 1: Human Excellence -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 transition duration-300 hover:shadow-2xl border-t-4 border-yellow-500">
+                    <div class="text-6xl text-yellow-500 mb-4">
+                        <!-- Icon: Heart/Human Figure -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900">The School of Human Excellence</h3>
+                    <p class="mt-4 text-kindness leading-relaxed">
+                        Mastering the **Art of Being Human**. Dive into courses on **Public Speaking**, **Charisma**, **Practical Fashion**, **Empathy**, **Life Values**, and **Strategy**. These are the tools for leadership, influence, and a life lived with intentionality.
+                    </p>
+                    <ul class="mt-6 space-y-2 text-kindness text-lg list-none pl-0">
+                        <li><span class="font-semibold text-primary">&#10003;</span> Cultivate Charisma & Personality</li>
+                        <li><span class="font-semibold text-primary">&#10003;</span> Practical Empathy & Humanity</li>
+                        <li><span class="font-semibold text-primary">&#10003;</span> Strategic & Creative Thinking</li>
+                    </ul>
+                </div>
+
+                <!-- Program Card 2: Conceptual Science -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 transition duration-300 hover:shadow-2xl border-t-4 border-primary">
+                    <div class="text-6xl text-primary mb-4">
+                        <!-- Icon: Atom/Logic -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 10v4M19 10v4M4 17h2M18 17h2M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2z"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900">The School of Conceptual Science</h3>
+                    <p class="mt-4 text-kindness leading-relaxed">
+                        Unlocking the **Universe, Intuitively**. **Physics**, **Mathematics**, and **Chemistry** are taught not as abstract formulas, but with deep conceptual understanding, practical application, and their real-life significance.
+                    </p>
+                    <ul class="mt-6 space-y-2 text-kindness text-lg list-none pl-0">
+                        <li><span class="font-semibold text-yellow-500">&#10003;</span> Physics: Real-World Significance</li>
+                        <li><span class="font-semibold text-yellow-500">&#10003;</span> Mathematics: Intuitive Conceptual Grasp</li>
+                        <li><span class="font-semibold text-yellow-500">&#10003;</span> Chemistry: Practical & Foundational</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="text-center mt-12">
+                <a href="#labs" class="btn-cta px-8 py-3 rounded-xl font-semibold text-lg inline-flex items-center">
+                    Explore Our Free AI Labs Below
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gemini AI Labs Section (New Feature!) -->
+    <section id="labs" class="py-16 sm:py-24 bg-teal-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-primary sm:text-5xl">
+                    Vidyarthi Labs ✨ Personalized AI Tools
+                </h2>
+                <p class="mt-3 text-xl text-kindness max-w-4xl mx-auto">
+                    Get instant, tailored support for your learning journey, powered by advanced conceptual intelligence.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                
+                <!-- LAB 1: Rhetoric Outline Generator (Human Excellence) -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-yellow-500">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4 flex items-center">
+                        <span class="text-yellow-500 mr-3">✨</span> Rhetoric Outline Generator
+                    </h3>
+                    <p class="text-kindness mb-6">Need a persuasive structure? Enter any topic and get a complete, empathetic speech outline instantly.</p>
+                    
+                    <input type="text" id="rhetoricTopic" placeholder="E.g., The importance of empathy in leadership" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                    
+                    <button id="generateRhetoric" class="btn-cta w-full mt-4 py-3 rounded-xl font-semibold inline-flex items-center justify-center space-x-2" onclick="generateRhetoricalOutline()">
+                        <span>Generate Outline</span>
+                        <div id="rhetoricLoading" class="loading-indicator"></div>
+                    </button>
+                    
+                    <div id="rhetoricResult" class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-lg whitespace-pre-wrap text-sm" style="min-height: 50px;">
+                        <!-- Results displayed here -->
+                    </div>
+                </div>
+
+                <!-- LAB 2: Conceptual Analogy Creator (Conceptual Science) -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-primary">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4 flex items-center">
+                        <span class="text-primary mr-3">✨</span> Conceptual Analogy Creator
+                    </h3>
+                    <p class="text-kindness mb-6">Struggling with a complex concept? Get a simple, real-world analogy to achieve intuitive understanding.</p>
+                    
+                    <input type="text" id="analogyConcept" placeholder="E.g., Quantum Entanglement or The Second Law of Thermodynamics" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                    
+                    <button id="generateAnalogy" class="btn-cta w-full mt-4 py-3 rounded-xl font-semibold inline-flex items-center justify-center space-x-2" onclick="generateIntuitiveAnalogy()">
+                        <span>Create Analogy</span>
+                        <div id="analogyLoading" class="loading-indicator"></div>
+                    </button>
+                    
+                    <div id="analogyResult" class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-lg whitespace-pre-wrap text-sm" style="min-height: 50px;">
+                        <!-- Results displayed here -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Founder Section (Empathy & Trust) -->
+    <section id="founder" class="py-16 sm:py-24 bg-teal-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-3 lg:gap-16 items-center">
+                
+                <!-- START: Founder Image Placeholder Replaced with Conceptual SVG Profile -->
+                <div class="lg:col-span-1 mb-8 lg:mb-0">
+                    <div class="h-96 w-full rounded-2xl p-6 bg-teal-200 flex items-center justify-center shadow-lg">
+                        <svg class="w-full h-full max-w-xs" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Circle (Empathy/Warmth) -->
+                            <circle cx="50" cy="50" r="45" fill="#FBBF24" opacity="0.4"/>
+                            
+                            <!-- Head Silhouette (Teal) -->
+                            <path d="M50 15 C 65 15, 75 30, 75 45 C 75 60, 60 75, 50 75 C 40 75, 25 60, 25 45 C 25 30, 35 15, 50 15 Z" fill="#0E7490"/>
+                            
+                            <!-- Shoulders/Kindness shape (Lighter Teal) -->
+                            <path d="M20 75 C 20 85, 30 90, 50 90 C 70 90, 80 85, 80 75 L 20 75 Z" fill="#1592B8"/>
+                            
+                            <!-- Subtle Star/Sparkle of knowledge -->
+                            <path d="M50 10 L 52 18 L 60 18 L 54 23 L 56 31 L 50 26 L 44 31 L 46 23 L 40 18 L 48 18 Z" fill="#FBBF24"/>
+                        </svg>
+                    </div>
+                </div>
+                <!-- END: Founder Image Placeholder Replaced -->
+
+                <!-- Founder Bio -->
+                <div class="lg:col-span-2">
+                    <p class="text-lg font-semibold text-primary mb-2">A Vision from the Heart</p>
+                    <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+                        Meet Ankit Kumar, Our Guiding Spirit.
+                    </h2>
+                    <p class="mt-4 text-xl text-kindness leading-relaxed">
+                        Ankit Kumar, a young **Orator, Rhetorician, Writer, and Science Enthusiast**, founded The Vidyarthi Foundation with a profound belief in the boundless potential of every individual. His journey is fueled by a **deep empathy** for learners worldwide and a commitment to dismantling barriers to quality education.
+                    </p>
+                    <p class="mt-4 text-xl text-kindness leading-relaxed font-bold">
+                        Ankit embodies the Foundation's ethos: that wisdom is cultivated not by privilege, but by pure passion and free access. His kindness is not just a personal trait; it is the very **foundation of our mission**.
+                    </p>
+                    
+                    <div class="quote-box mt-8 max-w-xl">
+                        <p class="text-2xl text-gray-700">
+                            *"Education is the gentle lamp that illuminates every path. It's a right, not a luxury, and my greatest joy is to light that lamp for all."*
+                        </p>
+                        <p class="mt-3 text-lg font-semibold text-primary">- Ankit Kumar, Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section (Call to Altruism & Transparency) -->
+    <section id="support" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-800 sm:text-5xl">
+                Be a Beacon of Knowledge: Join Our Mission.
+            </h2>
+            <p class="mt-4 text-xl text-kindness max-w-3xl mx-auto leading-relaxed">
+                The Vidyarthi Foundation thrives on the generosity of hearts like yours. Every contribution, big or small, directly fuels our ability to offer transformative education **completely free of charge**. You're not just donating; you're investing in human potential and building a brighter, more knowledgeable world.
+            </p>
+            <div class="mt-10 space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#" class="btn-cta text-xl px-10 py-4 rounded-xl font-bold inline-block sm:inline">
+                    Make a Donation Today
+                </a>
+                <a href="#" class="inline-block sm:inline text-lg font-semibold text-primary hover:text-yellow-600 border-2 border-primary hover:border-yellow-600 px-8 py-4 rounded-xl transition duration-150">
+                    Become a Volunteer
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-2xl font-extrabold mb-4">Vidyarthi</h3>
+                <p class="text-sm">Knowledge for Humanity. Education for All, Forever Free.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#vision" class="hover:text-yellow-300 transition">Our Vision</a></li>
+                    <li><a href="#programs" class="hover:text-yellow-300 transition">Our Programs</a></li>
+                    <li><a href="#founder" class="hover:text-yellow-300 transition">The Founder</a></li>
+                    <li><a href="#support" class="hover:text-yellow-300 transition">Support Our Work</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-3">The Schools</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#programs" class="hover:text-yellow-300 transition">Human Excellence</a></li>
+                    <li><a href="#programs" class="hover:text-yellow-300 transition">Conceptual Science</a></li>
+                    <li><a href="#labs" class="hover:text-yellow-300 transition">Vidyarthi Labs ✨</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-3">Contact</h4>
+                <p class="text-sm">Email: contact@vidyarthifoundation.org</p>
+                <p class="text-sm mt-2">Follow our journey:</p>
+                <div class="flex space-x-3 mt-2">
+                    <!-- Placeholder Social Icons -->
+                    <svg class="w-6 h-6 hover:text-yellow-300 transition" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><!-- Facebook --><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V15.46h-2.93V12h2.93V9.109c0-2.906 1.772-4.48 4.342-4.48 1.243 0 2.31 0.091 2.623 0.132v3.197l-1.897 0.001c-1.487 0-1.785 0.704-1.785 1.74v2.043h3.56L17 15.46h-3.359v6.419C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                    <svg class="w-6 h-6 hover:text-yellow-300 transition" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><!-- Instagram --><path d="M12 2C6.477 2 2 6.477 2 12c0 5.099 3.447 9.387 8.215 10.825L12 22l1.785-.175C18.553 21.387 22 17.099 22 12c0-5.523-4.477-10-10-10zm0 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm5.5-10c-0.828 0-1.5 0.672-1.5 1.5s0.672 1.5 1.5 1.5 1.5-0.672 1.5-1.5-0.672-1.5-1.5-1.5z"/></svg>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-10 border-t border-teal-600 pt-6">
+            <p class="text-sm">&copy; 2024 The Vidyarthi Foundation. All Rights Reserved. </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for LLM Integrations -->
+    <script>
+        const apiKey = ""; 
+        const API_URL_BASE = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+        // --- Utility Functions ---
+
+        function showLoading(elementId) {
+            document.getElementById(elementId).style.display = 'inline-block';
+        }
+
+        function hideLoading(elementId) {
+            document.getElementById(elementId).style.display = 'none';
+        }
+
+        function displayResult(elementId, text) {
+            const resultDiv = document.getElementById(elementId);
+            // Basic markdown-to-HTML conversion for display
+            const markdown = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                 .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                                 .replace(/^- /gm, '&bull; ') 
+                                 .replace(/\n/g, '<br>');
+            resultDiv.innerHTML = markdown;
+        }
+
+        async function exponentialBackoffFetch(url, options, maxRetries = 5, delay = 1000) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.status !== 429 && response.ok) {
+                        return response;
+                    } else if (response.status === 429 || !response.ok) {
+                        if (i < maxRetries - 1) {
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                            delay *= 2; // Exponential increase
+                            continue;
+                        } else {
+                            throw new Error(`API failed after ${maxRetries} retries with status: ${response.status}`);
+                        }
+                    }
+                } catch (error) {
+                    if (i < maxRetries - 1) {
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        delay *= 2;
+                        continue;
+                    } else {
+                        throw error;
+                    }
+                }
+            }
+        }
+
+        // --- Feature 1: Rhetoric Outline Generator (Human Excellence) ---
+
+        async function generateRhetoricalOutline() {
+            const topic = document.getElementById('rhetoricTopic').value.trim();
+            const resultDivId = 'rhetoricResult';
+            const loadingId = 'rhetoricLoading';
+
+            if (!topic) {
+                displayResult(resultDivId, "Please enter a speech topic to generate the outline.");
+                return;
+            }
+
+            showLoading(loadingId);
+            displayResult(resultDivId, "Generating persuasive outline...");
+
+            const systemPrompt = `You are Ankit Kumar, a master rhetorician and empathetic speaking coach for The Vidyarthi Foundation. Your goal is to provide a structured, ethical, and compelling speech outline designed for a brief presentation (5 minutes). Generate the entire outline as a single JSON object.`;
+            const userQuery = `Generate a persuasive, empathetic, and strategic speech outline for a 5-minute presentation on the topic: "${topic}".`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            "title": { "type": "STRING", "description": "The suggested title for the speech." },
+                            "introduction": {
+                                "type": "OBJECT",
+                                "properties": {
+                                    "hook": { "type": "STRING", "description": "An emotional or relatable opening statement." },
+                                    "thesis": { "type": "STRING", "description": "The core argument of the speech." }
+                                }
+                            },
+                            "bodyPoints": {
+                                "type": "ARRAY",
+                                "items": {
+                                    "type": "OBJECT",
+                                    "properties": {
+                                        "point": { "type": "STRING", "description": "The main argument point." },
+                                        "support": { "type": "STRING", "description": "A piece of evidence or empathetic story to support the point." }
+                                    }
+                                }
+                            },
+                            "conclusion": {
+                                "type": "OBJECT",
+                                "properties": {
+                                    "recap": { "type": "STRING", "description": "Brief summary of main points." },
+                                    "callToAction": { "type": "STRING", "description": "A powerful final action or takeaway for the audience." }
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            try {
+                const response = await exponentialBackoffFetch(API_URL_BASE, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                
+                const jsonText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (!jsonText) throw new Error("API response structure invalid.");
+                
+                const outline = JSON.parse(jsonText);
+                
+                let formattedOutput = `
+                    **Speech Title:** ${outline.title}
+                    
+                    **I. Introduction**
+                    &bull; **Hook:** ${outline.introduction.hook}
+                    &bull; **Thesis:** ${outline.introduction.thesis}
+
+                    **II. Body Arguments**
+                    ${outline.bodyPoints.map((point, index) => `
+                        **Point ${index + 1}:** ${point.point}
+                        &nbsp;&nbsp;&nbsp;&nbsp;*Support/Empathy:* ${point.support}
+                    `).join('\n')}
+
+                    **III. Conclusion**
+                    &bull; **Recap:** ${outline.conclusion.recap}
+                    &bull; **Call to Action:** ${outline.conclusion.callToAction}
+                `;
+
+                displayResult(resultDivId, formattedOutput.trim());
+
+            } catch (error) {
+                console.error("Rhetoric Outline Error:", error);
+                displayResult(resultDivId, `We apologize, but an error occurred while generating the outline. Please check the console for details.`);
+            } finally {
+                hideLoading(loadingId);
+            }
+        }
+
+        // --- Feature 2: Conceptual Analogy Creator (Conceptual Science) ---
+
+        async function generateIntuitiveAnalogy() {
+            const concept = document.getElementById('analogyConcept').value.trim();
+            const resultDivId = 'analogyResult';
+            const loadingId = 'analogyLoading';
+
+            if (!concept) {
+                displayResult(resultDivId, "Please enter a scientific concept to create an analogy.");
+                return;
+            }
+
+            showLoading(loadingId);
+            displayResult(resultDivId, "Creating intuitive analogy...");
+
+            const systemPrompt = `You are Ankit Kumar, an intuitive science educator for The Vidyarthi Foundation. Your response must be a single, short, kind, and helpful paragraph that explains the scientific concept using only everyday, non-technical analogies, highlighting its practical or real-life significance. Do not use the technical term itself in the analogy's explanation.`;
+            const userQuery = `Explain the concept: "${concept}".`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+            };
+
+            try {
+                const response = await exponentialBackoffFetch(API_URL_BASE, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                
+                if (text) {
+                    displayResult(resultDivId, `**Analogy for ${concept}:**<br>${text.trim()}`);
+                } else {
+                    throw new Error("API response was empty.");
+                }
+
+            } catch (error) {
+                console.error("Analogy Creator Error:", error);
+                displayResult(resultDivId, `We apologize, but an error occurred while generating the analogy. Please check the console for details.`);
+            } finally {
+                hideLoading(loadingId);
+            }
+        }
+
+    </script>
+</body>
+</html>
